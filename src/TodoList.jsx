@@ -5,7 +5,7 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
     <ul className="list">
       {/*React short circuiting returns if true, will use as placeholder*/}
       {todos.length === 0 && "No Todos"}
-      {todos.map((todo) => {
+      {todos.map(todo => {
         return (
           // React requires a key to know which todo to change if a
           // change is requested, otherwise console errors appear.
@@ -15,8 +15,8 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />
-        );
+        )
       })}
     </ul>
-  );
+  )
 }
